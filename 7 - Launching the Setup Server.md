@@ -1,5 +1,7 @@
 ## Launching the Setup Server
 
+<img width="820" alt="Screenshot 2023-05-26 at 20 24 54" src="https://github.com/leorickli/wordpress-aws/assets/106999054/327fbbda-e889-450b-a129-1fdec8d70556">
+
 I this section, we will launch the EC2 istance that will install Wordpress in the public subnet AZ1.
 
 In the AWS console, search for EC2. On the EC2 dashboard, in the "Resources" tab, select "Instances (running)" then "Launch Instances". Give it a name, one the "Application and OS Images (Amazon Machine Images), select "Amazon Linux 2023AMI", this is the free tier AMI.
