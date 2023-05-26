@@ -19,4 +19,15 @@ Now we can create the database, in the RDS dashboard, select "Databases", then "
 ![Screenshot 2023-05-26 at 16 12 23](https://github.com/leorickli/wordpress-aws/assets/106999054/ab6bc3e8-2af7-4a5d-bb65-2a9e9579d1bb)
 ![Screenshot 2023-05-26 at 16 22 27](https://github.com/leorickli/wordpress-aws/assets/106999054/e0258828-48fc-434d-bce1-c47c0dd8e50e)
 
-Proceding with the creation, on "Settings", give your DB a name, a master username and a passowrd
+Proceding with the creation, on "Settings", give your DB a name, a master username and a passowrd. On "DB instance class", select the burstable classes and toogle "Include previous generation classes", AWS will give you the free instance. On "Connectivity", select your custom Dev VPC, make sure that you have your subnet groups selected for the "Subnet group" field, for the "VPC security group", make sure that you "Choose existing" SG, the existing one that we will use is the Database SG, delete the "default" option, on "Availability Zone", select "us-east-1b" according to the diagram above.
+
+![Screenshot 2023-05-26 at 16 38 17](https://github.com/leorickli/wordpress-aws/assets/106999054/f4b0ca78-e386-416b-b9eb-377e403196b9)
+![Screenshot 2023-05-26 at 16 40 20](https://github.com/leorickli/wordpress-aws/assets/106999054/7cdaaf46-fb3c-44ee-afc6-915ecbb4b0d1)
+![Screenshot 2023-05-26 at 16 43 46](https://github.com/leorickli/wordpress-aws/assets/106999054/51e461fb-da87-4d70-8964-d0f0db1a937a)
+![Screenshot 2023-05-26 at 16 47 43](https://github.com/leorickli/wordpress-aws/assets/106999054/7c8852ad-ab57-4841-84fb-b0243f15a061)
+
+Finally, on "Additional configuration", enter your database name on "Initial database name".
+
+![Screenshot 2023-05-26 at 16 50 44](https://github.com/leorickli/wordpress-aws/assets/106999054/56a5e699-c477-44b8-9882-61383ab7c3cc)
+
+You can now create your database, wait a few minutes for it to be complete. Make sure you save your credentials by clicking on "View credential details".
