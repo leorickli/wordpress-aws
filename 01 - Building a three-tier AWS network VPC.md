@@ -5,9 +5,9 @@
 We will start by creating a custom VPC, we will build a three-tier VPC using the architecture shown above.
 In this architecture, your infrastructure is divided into three tiers:
 
-- Tier 1: This is the public subnet. This subnet will have resources like the NAT gateway, load balancer and a bastion host.
-- Tier 2: This is the private subnet. This is the subnet that will hold our web servers (EC2 instances).
-- Tier 3: This is another private subnet. This subnet will hold our database.
+- **Tier 1**: This is the public subnet. This subnet will have resources like the NAT gateway, load balancer and a bastion host.
+- **Tier 2**: This is the private subnet. This is the subnet that will hold our web servers (EC2 instances).
+- **Tier 3**: This is another private subnet. This subnet will hold our database.
 
 We will duplicate these subnets across another availability zone (AZ) for High Availability (HA) and Fault Tolerance (FA). Next, an Internet Gateway will be created and a Route Table to allow the resources in our VPC to have access to the public internet.
 
