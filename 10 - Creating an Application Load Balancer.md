@@ -86,7 +86,7 @@ Wait for the provisioning of the ALB and once done, we will use the "DNS name" o
 
 ![Screenshot 2023-05-28 at 15 46 45](https://github.com/leorickli/wordpress-aws/assets/106999054/4eefaeda-1d35-4ff6-9390-e7d3412210f7)
 
-But there is one more thing that we need to do. Anytime we change your domain address, we have to go to the WordPress settings and change the domain address there as well. To change the domain settings in the Wordpress configuration file, insert "wp-admin" in front of your DNS name.
+But there is one more thing that we need to do. Anytime we change your domain address, we have to go to the WordPress settings and change the domain address there as well. To change the domain settings in the Wordpress configuration file, insert "/wp-admin" in front of your DNS name.
 
 ![Screenshot 2023-05-28 at 15 51 43](https://github.com/leorickli/wordpress-aws/assets/106999054/2d90bcd7-2531-4b1f-a90e-29c2dcf89cef)
 
