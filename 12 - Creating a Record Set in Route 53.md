@@ -8,4 +8,7 @@ On "Record name", type "www" for your subdomain name, the record type is going t
 
 ![Screenshot 2023-05-28 at 17 48 55](https://github.com/leorickli/wordpress-aws/assets/106999054/9968c1ad-c9ac-4a40-a05a-26c0934c275a)
 
-Now we can access our website using our domain name. To do that, just select the record we just created, copy the record name and paste it in your browser. In a previous 
+Now we can access our website using our domain name. To do that, just select the record we just created, copy the record name and paste it in your browser. In a section #10, every time that the domain is changed, you would have to go into your WordPress settings and change the domain there too, to fix that, paste your domain name again in the browser and type "/wp-admin" in front of it.
+
+![Screenshot 2023-05-28 at 17 56 08](https://github.com/leorickli/wordpress-aws/assets/106999054/1d8caaa1-aa72-4e62-a898-999314d66abc)
+
