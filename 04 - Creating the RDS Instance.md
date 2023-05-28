@@ -2,7 +2,7 @@
 
 ![Screenshot 2023-05-26 at 15 36 13](https://github.com/leorickli/wordpress-aws/assets/106999054/d936fb71-fa49-4deb-ab36-0dbaecf786fe)
 
-Amazon RDS (Relational Database Service) is a managed database service provided by AWS. It offers a scalable and cost-effective solution for deploying and managing relational databases in the cloud. By implementing Amazon RDS in a WordPress deployment on AWS, you can leverage a scalable, managed, and highly available database service. It simplifies database administration, improves performance and scalability, enhances security, and integrates seamlessly with other AWS services, ultimately providing a reliable and efficient backend for your WordPress site.
+*Amazon RDS (Relational Database Service) is a managed database service provided by AWS. It offers a scalable and cost-effective solution for deploying and managing relational databases in the cloud. By implementing Amazon RDS in a WordPress deployment on AWS, you can leverage a scalable, managed, and highly available database service. It simplifies database administration, improves performance and scalability, enhances security, and integrates seamlessly with other AWS services, ultimately providing a reliable and efficient backend for your WordPress site.*
 
 In this section, we will create the RDS database in the private data subnets. The main database will be in AZ1 and the standby replica will be in the AZ1, making it a Multi-AZ instance.
 
