@@ -12,3 +12,8 @@ Now we can access our website using our domain name. To do that, just select the
 
 ![Screenshot 2023-05-28 at 17 56 08](https://github.com/leorickli/wordpress-aws/assets/106999054/1d8caaa1-aa72-4e62-a898-999314d66abc)
 
+Login to the website again. On the dashboard, select "Settings" > "General", paste the A record name that you created on Route 53 on "WordPress Address (URL)" and "Site Address (URL)" with "http://" in the beginning. Save changes.
+
+![Screenshot 2023-05-28 at 18 01 17](https://github.com/leorickli/wordpress-aws/assets/106999054/82069f5f-5067-4261-9661-9a14fd717c48)
+
+Login again, once logged in, we will see that the website has your domain name now.
