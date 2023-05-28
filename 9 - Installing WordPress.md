@@ -102,7 +102,7 @@ service httpd restart
 
 ### First login
 
-We can now connect into our Wordpress website, just copy your instance's "Public IPv4 address" again and paste it on your browser
+We can now connect into our Wordpress website, just copy your instance's "Public IPv4 address" again and paste it on your browser, you will see 
 
 
 
