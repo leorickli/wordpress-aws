@@ -2,7 +2,7 @@
 
 <img width="1044" alt="Screenshot 2023-05-25 at 23 08 43" src="https://github.com/leorickli/wordpress-aws/assets/106999054/be107717-0b37-4f0f-8699-5613ca8ff3e3">
 
-In AWS, a Security Group (SG) is a virtual firewall that controls inbound and outbound traffic for EC2 instances, RDS instances, and other resources within a VPC. It acts as a first line of defense for your resources, allowing you to define inbound and outbound rules to control network access.
+*In AWS, a Security Group (SG) is a virtual firewall that controls inbound and outbound traffic for EC2 instances, RDS instances, and other resources within a VPC. It acts as a first line of defense for your resources, allowing you to define inbound and outbound rules to control network access.*
 
 In this section we will create multiple Security Groups:
 
