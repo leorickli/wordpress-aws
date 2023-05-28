@@ -4,7 +4,7 @@
 
 I this section, we will launch the EC2 istance that will install Wordpress in the public subnet AZ1.
 
-In the AWS console, search for EC2. On the EC2 dashboard, in the "Resources" tab, select "Instances (running)" then "Launch Instances". Give it a name, one the "Application and OS Images (Amazon Machine Images), select "Amazon Linux 2 AMI (HVM)", this is the free tier AMI. Be careful to not choose "Amazon Linux 2023", even though this one is also free tier, it will not work when we try to install WordPress in it.
+In the AWS console, search for EC2. On the EC2 dashboard, in the "Resources" tab, select "Instances (running)" then "Launch Instances". Give it a name, one the "Application and OS Images (Amazon Machine Images), select "Amazon Linux 2 AMI (HVM)", this is the free tier AMI. Be careful not to choose "Amazon Linux 2023", even though this one is also free tier, it will not work when we try to install WordPress in it.
 
 <img width="785" alt="Screenshot 2023-05-27 at 20 42 08" src="https://github.com/leorickli/wordpress-aws/assets/106999054/eb722a29-29ec-4105-917e-92bc1f5ff8e1">
 <img width="786" alt="Screenshot 2023-05-27 at 20 42 25" src="https://github.com/leorickli/wordpress-aws/assets/106999054/4d26cbd2-befa-49bc-88f0-be7e5a87c724">
