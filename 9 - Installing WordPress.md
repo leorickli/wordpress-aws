@@ -1,6 +1,6 @@
 ## Installing Wordpress
 
-Now that we enabled SSH into our server, we are going to run a list of commands to install the WordPress site and move the files to EFS
+Now that we enabled SSH into our server, we are going to run a list of commands in the terminal to install the WordPress site and move the files to EFS.
 
 ### 1. Create the HTML directory and mount the EFS to it
 
@@ -93,12 +93,16 @@ We will have to put our username and password on the correct fields. Finally, we
 
 <img width="673" alt="Screenshot 2023-05-27 at 21 38 02" src="https://github.com/leorickli/wordpress-aws/assets/106999054/9a211a2d-c1ac-4631-bb13-68c31b425168">
 
-Once we finished on filling the info required, we have exit Nano, to do that, press "Control + X" > "Y" > "Enter"
+Once we finished on filling the info required, we have exit Nano, to do that, press "Control + X" > "Y" > "Enter".
 
 ### 9. Restart the webserver
 ```
 service httpd restart
 ```
+
+### First login
+
+We can now connect into our Wordpress website, just copy your instance's "Public IPv4 address" again and paste it on your browser
 
 
 
