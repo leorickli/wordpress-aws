@@ -93,7 +93,7 @@ We will have to put our username and password on the correct fields. Finally, we
 
 <img width="673" alt="Screenshot 2023-05-27 at 21 38 02" src="https://github.com/leorickli/wordpress-aws/assets/106999054/9a211a2d-c1ac-4631-bb13-68c31b425168">
 
-Once we finished on filling the info required, we have exit Nano, to do that, press "Control + X" > "Y" > "Enter".
+Once we finished on filling the info required, we exit Nano. To do that, press "Control + X" > "Y" > "Enter".
 
 ### 9. Restart the webserver
 ```
@@ -102,14 +102,10 @@ service httpd restart
 
 ### First login
 
-We can now connect into our Wordpress website, just copy your instance's "Public IPv4 address" again and paste it on your browser, you will see 
+We can now connect into our Wordpress website, just copy your instance's "Public IPv4 address" again and paste it on your browser, we will see the Wordpress welcome page and you can insert your data, then click "Install WordPress".
 
+<img width="751" alt="Screenshot 2023-05-28 at 14 02 22" src="https://github.com/leorickli/wordpress-aws/assets/106999054/07843a94-aa06-485f-aa6b-e9216c23a592">
 
+Once you've logged in to the site, we can see that finally we have our WordPress loud and pround in the screen.
 
-
-
-
-
-
-
-
+<img width="1506" alt="Screenshot 2023-05-28 at 14 05 08" src="https://github.com/leorickli/wordpress-aws/assets/106999054/a3701526-4196-440f-a6eb-1968fe454fc8">
