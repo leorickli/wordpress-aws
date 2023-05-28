@@ -38,6 +38,10 @@ sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
 
+- **sudo yum install -y httpd httpd-tools mod_ssl**: This command installs the Apache HTTP Server package (httpd), the necessary tools (httpd-tools), and the SSL module (mod_ssl) for secure connections. The sudo command is used to run the installation with administrative privileges.
+- **sudo systemctl enable httpd**: This command enables the httpd service to start automatically at boot time. It sets up the appropriate system links to ensure the service starts on system startup.
+- **sudo systemctl start httpd**: This command starts the httpd service immediately. It initiates the Apache HTTP Server, allowing it to handle incoming HTTP requests.
+
 ### 3. Install PHP 7.4
 ```
 sudo amazon-linux-extras enable php7.4
@@ -45,6 +49,10 @@ sudo yum clean metadata
 sudo yum install php php-common php-pear -y
 sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip} -y
 ```
+- **sudo amazon-linux-extras enable php7.4**: This command enables the Amazon Linux Extra repository for PHP 7.4. It allows you to install and update packages related to PHP.
+- **sudo yum clean metadata**: This command cleans the local package metadata cache, ensuring that the latest package information is fetched from the enabled repositories.
+- **sudo yum install php php-common php-pear -y**: This command installs PHP itself (php), along with the common PHP libraries and utilities (php-common) and PHP Extension and Application Repository (php-pear).
+- **sudo yum install php-{cgi,curl,mbstring,gd,mysqlnd,gettext,json,xml,fpm,intl,zip} -y**: This command installs additional PHP extensions and modules. The extensions listed in the command include CGI (php-cgi), cURL (php-curl), Multibyte String (php-mbstring), GD Graphics Library (php-gd), MySQL Native Driver (php-mysqlnd), Gettext (php-gettext), JSON (php-json), XML (php-xml), FastCGI Process Manager (php-fpm), Internationalization (php-intl), and ZIP (php-zip).
 
 ### 4. Install MySQL 5.7
 ```
@@ -54,6 +62,11 @@ sudo yum install mysql-community-server -y
 sudo systemctl enable mysqld
 sudo systemctl start mysqld
 ```
+- **sudo rpm -Uvh https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm**: This command downloads and installs the MySQL Community Server repository configuration package.
+- **sudo rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022**: This command imports the GPG key used to sign the MySQL packages, ensuring their authenticity.
+- **sudo yum install mysql-community-server -y**: This command installs the MySQL Community Server package.
+- **sudo systemctl enable mysqld**: This command enables the MySQL service to start automatically on system boot.
+- **sudo systemctl start mysqld**: This command starts the MySQL service.
 
 ### 5. Set Permissions
 ```
@@ -63,6 +76,11 @@ sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;
 sudo find /var/www -type f -exec sudo chmod 0664 {} \;
 chown apache:apache -R /var/www/html
 ```
+- **sudo usermod -a -G apache ec2-user**: This command adds the ec2-user to the apache group. By adding the user to the group, it allows the user to access files and directories owned by the apache group.
+- **sudo chown -R ec2-user:apache /var/www**: This command changes the ownership of the /var/www directory and its contents to ec2-user:apache. This ensures that the ec2-user and the apache group have the necessary permissions to manage the files.
+- **sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;**: These commands set the directory permissions of /var/www and its subdirectories to 2775. The 2 at the beginning ensures that new files and directories inherit the group ownership, and the 775 permissions grant read, write, and execute permissions to the owner and group, and read and execute permissions to others.
+- **sudo find /var/www -type f -exec sudo chmod 0664 {} \;**: This command sets the file permissions of /var/www and its subdirectories to 0664. The 6 at the beginning grants read and write permissions to the owner and group, and read permissions to others.
+- **chown apache:apache -R /var/www/html**: This command changes the ownership of the /var/www/html directory and its contents to apache:apache. This is typically done to ensure that the web server process (running as the apache user) has the necessary permissions to read and serve the web content.
 
 ### 6. Download WordPress files
 ```
@@ -70,11 +88,15 @@ wget https://wordpress.org/latest.tar.gz
 tar -xzf latest.tar.gz
 cp -r wordpress/* /var/www/html/
 ```
+- **wget https://wordpress.org/latest.tar.gz**: This command uses the wget tool to download the latest version of WordPress as a compressed tarball (latest.tar.gz) from the official WordPress website.
+- **tar -xzf latest.tar.gz**: This command extracts the contents of the latest.tar.gz tarball using the tar command. The options -xzf specify that the tarball should be extracted (-x), the input file is compressed with gzip (-z), and the filename is provided (-f).
+- **cp -r wordpress/* /var/www/html/**: This command copies all the files and directories from the extracted wordpress directory to the document root directory of the web server (/var/www/html/). The -r option ensures that the copy operation is recursive and includes all subdirectories and files.
 
 ### 7. Create the wp-config.php file
 ```
 cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
 ```
+- This command is used to make a copy of the WordPress sample configuration file (wp-config-sample.php) and rename it to wp-config.php.
 
 ### 8. Edit the wp-config.php file
 
@@ -99,6 +121,7 @@ Once we finished on filling the info required, we exit Nano. To do that, press "
 ```
 service httpd restart
 ```
+- This command is used to restart the Apache server.
 
 ### First login
 
