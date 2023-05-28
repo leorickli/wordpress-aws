@@ -2,7 +2,7 @@
 
 ![Screenshot 2023-05-28 at 16 13 39](https://github.com/leorickli/wordpress-aws/assets/106999054/1801d7a0-6165-427a-8364-b354db49e253)
 
-* *An AWS Application Load Balancer (ALB) is a managed load balancing service provided by Amazon Web Services (AWS). It operates at the application layer (Layer 7) of the OSI model and is designed to distribute incoming traffic across multiple targets such as Amazon EC2 instances, containers, IP addresses, or Lambda functions.* *
+*An AWS Application Load Balancer (ALB) is a managed load balancing service provided by Amazon Web Services (AWS). It operates at the application layer (Layer 7) of the OSI model and is designed to distribute incoming traffic across multiple targets such as Amazon EC2 instances, containers, IP addresses, or Lambda functions.*
 
 In this section, we will create and ALB (Application Load Balancer) to route traffic between the EC2 instances in the private app subnets. Before we create the ALB, we need to first lauch the EC2 instances in their respective application subnets. We have created the Setup Server instance to have the Wordpress files save in EFS, now we can install the real instances in the private subnets, attach it to EFS and then delete the Setup Server instance in the public subnet.
 
