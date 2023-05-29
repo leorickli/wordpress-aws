@@ -9,3 +9,7 @@ To do that, search for EC2 in the AWS console. On the EC2 dashboard, go to "Load
 On "Secure listener settings", select the certificate that we created on section #13. Click "Add".
 
 <img width="807" alt="Screenshot 2023-05-29 at 10 45 02" src="https://github.com/leorickli/wordpress-aws/assets/106999054/751ac264-e7b7-4dcf-ab3c-85bbc898bff4">
+
+Now we have to edit our HTTP listener to redirect HTTP traffic to HTTPS. To do that, select the "HTTP: 80" on "Listener ID" and click "Actions" > "Edit listener". On the edit page, click "Remove" on the "Default actions" and then select "Redirect", type 443 in front of the HTTPS protocol. Save changes.
+
+<img width="813" alt="Screenshot 2023-05-29 at 15 13 48" src="https://github.com/leorickli/wordpress-aws/assets/106999054/33c2a47b-cd59-447f-b6a3-9d3301e0fd40">
