@@ -20,4 +20,4 @@ Now let's go back to our EC2 instances and attach this new role to them. To do t
 
 This can take some time, it took nearly 40 minutes for me. Don't forget to do that on your second EC2 instance.
 
-<img width="1087" alt="Screenshot 2023-05-28 at 23 07 03" src="https://github.com/leorickli/wordpress-aws/assets/106999054/38bf3abf-b307-46c3-a4dd-863ee4e7dac3">
+<img width="810" alt="Screenshot 2023-05-29 at 00 01 49" src="https://github.com/leorickli/wordpress-aws/assets/106999054/f6d7bad8-acad-486e-b8ab-9d2ef46393c0">
