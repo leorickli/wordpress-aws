@@ -6,6 +6,8 @@
 
 In this section, we will create and ALB (Application Load Balancer) to route traffic between the EC2 instances in the private app subnets. Before we create the ALB, we need to first lauch the EC2 instances in their respective application subnets. We have created the Setup Server instance to have the Wordpress files save in EFS, now we can install the real instances in the private subnets, attach it to EFS and then delete the Setup Server instance in the public subnet.
 
+### Creating the Private Instances
+
 In the AWS console, search for EC2. On the EC2 dashboard, select "EC2 Dashboard" and then click on "Launch instance". Give it a name and choose the "Amazon Linux 2 AMI (HVM)" instance, this is important for compatibility with Wordpress.
 
 <img width="788" alt="Screenshot 2023-05-28 at 14 31 44" src="https://github.com/leorickli/wordpress-aws/assets/106999054/57a08798-adba-4f33-9fdf-396394d5b621">
@@ -48,6 +50,8 @@ We will now create the same instance but this time it will be the "Webserver AZ2
 
 ![Screenshot 2023-05-28 at 15 18 57](https://github.com/leorickli/wordpress-aws/assets/106999054/4edc5d3b-4340-466e-a4bf-78765c007932)
 
+### Creating a Target Group
+
 Next, we will create a target group and put these two EC2 instances in the target group to allow the ALB to route traffic to them. To create a target group, go to the EC2 dashboard and search for "Load Balancing", select "Target groups" and click "Create target group". For "Choose a target type", leave it at default on "Instances", give it a name on "Target group name" and elect our custom Dev VPC.
 
 ![Screenshot 2023-05-28 at 15 22 13](https://github.com/leorickli/wordpress-aws/assets/106999054/be22ca82-e5f6-4d83-b7a2-fdc995951e6e)
@@ -65,6 +69,8 @@ HTTP success codes are used to indicate that a request has been successfully pro
 On the "Register targets" page, we will select the instances we want to ALB to route to, we will choose the Webserver AZ1 and AZ2, once included, click on "Include as pending below". Click "Create target group".
 
 ![Screenshot 2023-05-28 at 15 29 33](https://github.com/leorickli/wordpress-aws/assets/106999054/ec4a7139-46ff-4ec6-9b87-8a2b29ae65d5)
+
+### Creating the Application Load Balancer
 
 On the EC2 dashboard and on "Load Balancing" again, click on "Load Balancers", then click "Create load balancer". We will choose the Application Load Balancer (ALB) because it's more secure and we don't need the extra speed of the network load balancer.
 
