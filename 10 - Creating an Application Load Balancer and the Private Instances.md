@@ -1,4 +1,4 @@
-## Creating an Application Load Balancer
+## Creating an Application Load Balancer and the Private Instances
 
 ![Screenshot 2023-05-28 at 16 13 39](https://github.com/leorickli/wordpress-aws/assets/106999054/1801d7a0-6165-427a-8364-b354db49e253)
 
