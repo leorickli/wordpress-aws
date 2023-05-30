@@ -18,7 +18,7 @@ In this section we will create multiple Security Groups:
 
 The first Security Group we will create is the Application Load Balancer (ALB) SG. We will open port 80 (for HTTP connection) and 443 (for HTTPS connection) and the source is going to come from anywhere on the internet (0.0.0.0/0).
 
-On VPC dashboard that is on the left side, select "Security groups", click "Create security group". Give it a name and the same name for the description, select your custom Dev VPC that you created. On "Inbound rules", click "Add rule", we will add two ports:
+Search for VPC on the AWS console. On the VPC dashboard, select "Security groups", click "Create security group". Give it a name and the same name for the description, select your custom Dev VPC that you created. On "Inbound rules", click "Add rule", we will add two ports:
 
 1. Type: HTTP (port 80). Source: Anywhere-IPv4 (0.0.0.0/0)
 2. Type: HTTPS (port 443). Source: Anywhere-IPv4 (0.0.0.0/0)
