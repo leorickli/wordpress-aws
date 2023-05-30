@@ -90,7 +90,7 @@ cp -r wordpress/* /var/www/html/
 ```
 - **wget https://wordpress.org/latest.tar.gz**: This command uses the wget tool to download the latest version of WordPress as a compressed tarball (latest.tar.gz) from the official WordPress website.
 - **tar -xzf latest.tar.gz**: This command extracts the contents of the latest.tar.gz tarball using the tar command. The options -xzf specify that the tarball should be extracted (-x), the input file is compressed with gzip (-z), and the filename is provided (-f).
-- **cp -r wordpress/* /var/www/html/**: This command copies all the files and directories from the extracted wordpress directory to the document root directory of the web server (/var/www/html/). The -r option ensures that the copy operation is recursive and includes all subdirectories and files.
+- **cp -r wordpress/\* /var/www/html/**: This command copies all the files and directories from the extracted wordpress directory to the document root directory of the web server (/var/www/html/). The -r option ensures that the copy operation is recursive and includes all subdirectories and files.
 
 ### 7. Create the wp-config.php file
 ```
