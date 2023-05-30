@@ -2,4 +2,10 @@
 
 # Hosting WordPress on AWS - Full Guide
 
-This is a (almost) free guide that will teach you how to deploy a fully operational WordPress website on AWS cloud infrastructure. I say almost free because we still have to pay for a domain in Route 53 to make the connection in "traditional" ways
+This is a (almost) free guide that will teach you how to deploy a fully operational WordPress website on AWS cloud infrastructure. I say almost free because we still have to pay for a domain in Route 53 to make the connection via "traditional" ways through a domain name, secured by an SSL certificate.
+
+### Sections
+
+01. Building a Three-Tier AWS VPC
+02. ;asldkf
+03. 
