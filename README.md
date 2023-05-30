@@ -6,6 +6,7 @@ This is a (almost) free guide that will teach you how to deploy a fully operatio
 
 ### Sections
 
-01. Building a Three-Tier AWS VPC
-02. ;asldkf
-03. 
+01. Building a Three-Tiered AWS VPC
+02. Creating NAT Gateways
+03. Creating the Security Groups
+4. Creating the RDS Instances
