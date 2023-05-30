@@ -6,7 +6,7 @@ This is a (almost) free guide that will teach you how to deploy a fully operatio
 
 <img width="876" alt="Screenshot 2023-05-30 at 17 54 33" src="https://github.com/leorickli/wordpress-aws/assets/106999054/684a5db5-cadb-4b77-ad4c-1855d14adb8f">
 
-This is an excelent project to hone your AWS and cloud skills, since all cloud counterparts (GCP, Azure, etc) use similar structure compared to this. You will learn how to use VPCs, subnets, security groups, NAT gateways, route tables, VMs, file systems, databases, create domain names, SSL certificates and IAM roles, making it a great add in your portfolio.
+This is an excelent project to hone your AWS and cloud skills, since all cloud counterparts (GCP, Azure, etc) use similar structure compared to this. You will learn how to use VPCs, subnets, security groups, NAT gateways, route tables, VMs, file systems, databases, create domain names, SSL certificates and IAM roles, making it a great add to your portfolio.
 
 ### Resources Used
 
