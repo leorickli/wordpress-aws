@@ -8,7 +8,7 @@ To do that, search for EC2 in the AWS console. On the EC2 dashboard, go to "Load
 
 <img width="808" alt="Screenshot 2023-05-29 at 10 43 42" src="https://github.com/leorickli/wordpress-aws/assets/106999054/76a324bc-efd2-4518-aee9-5cc45127e338">
 
-On "Secure listener settings", select the certificate that we created on section #13. Click "Add".
+On "Secure listener settings", select the certificate that we created in section #13. Click "Add".
 
 <img width="807" alt="Screenshot 2023-05-29 at 10 45 02" src="https://github.com/leorickli/wordpress-aws/assets/106999054/751ac264-e7b7-4dcf-ab3c-85bbc898bff4">
 
@@ -61,10 +61,10 @@ No need to edit the second EC2 instance because the "wp-config" file is stored i
 
 ### Connecting to the Website Using SSL Certificate
 
-Now that we edited the "wp-config" file by adding the code above, we will now connect to our website to make sure that it now has an SSL connection. To do that, type your website domain with "https://" 
+Now that we edited the "wp-config" file by adding the code above, we will now connect to our website to make sure that it now has an SSL connection. To do that, type your website domain with "https://".
 
 ![Screenshot 2023-05-29 at 21 08 36](https://github.com/leorickli/wordpress-aws/assets/106999054/2aa76d6e-019e-4084-a995-43fed41ba92b)
 
-We can see the little lock beside our website, this means that we made a secure connection to our website! The next thing we will do is update the URL settings for our WordPress site. To do that, type "/wp-admin" in front of your domain name and press Ennter. Login into the website again and in the dashboard, select "Settings" > "General". Update the "WordPress address (URL)" and "Site address (URL)" with "https" so we can have a secure connection. Save changes.
+We can see the little lock beside our website, this means that we made a secure connection to our website! The next thing we will do is update the URL settings for our WordPress site. To do that, type "/wp-admin" in front of your domain name and press Enter. Login into the website again and in the dashboard, select "Settings" > "General". Update the "WordPress address (URL)" and "Site address (URL)" with "https" so we can have a secure connection. Save changes.
 
 ![Screenshot 2023-05-29 at 21 14 32](https://github.com/leorickli/wordpress-aws/assets/106999054/00db1071-2afa-4d1d-af4a-385fed0d5817)
