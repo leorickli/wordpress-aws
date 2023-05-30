@@ -4,11 +4,11 @@
 
 *An AWS Application Load Balancer (ALB) is a managed load balancing service provided by Amazon Web Services (AWS). It operates at the application layer (Layer 7) of the OSI model and is designed to distribute incoming traffic across multiple targets such as Amazon EC2 instances, containers, IP addresses, or Lambda functions.*
 
-In this section, we will create and ALB (Application Load Balancer) to route traffic between the EC2 instances in the private app subnets. Before we create the ALB, we need to first lauch the EC2 instances in their respective application subnets. We have created the Setup Server instance to have the Wordpress files save in EFS, now we can install the real instances in the private subnets, attach it to EFS and then delete the Setup Server instance in the public subnet.
+In this section, we will create an ALB (Application Load Balancer) to route traffic between the EC2 instances in the private app subnets. Before we create the ALB, we need to first launch the EC2 instances in their respective application subnets. We have created the Setup Server instance to have the WordPress files saved in EFS, now we can install the real instances in the private subnets, attach it to EFS and then delete the Setup Server instance in the public subnet.
 
 ### Creating the Private Instances
 
-In the AWS console, search for EC2. On the EC2 dashboard, select "EC2 Dashboard" and then click on "Launch instance". Give it a name and choose the "Amazon Linux 2 AMI (HVM)" instance, this is important for compatibility with Wordpress.
+In the AWS console, search for EC2. On the EC2 dashboard, select "EC2 Dashboard" and then click on "Launch instance". Give it a name and choose the "Amazon Linux 2 AMI (HVM)" instance, this is important for compatibility with WordPress.
 
 <img width="788" alt="Screenshot 2023-05-28 at 14 31 44" src="https://github.com/leorickli/wordpress-aws/assets/106999054/57a08798-adba-4f33-9fdf-396394d5b621">
 <img width="786" alt="Screenshot 2023-05-28 at 14 33 13" src="https://github.com/leorickli/wordpress-aws/assets/106999054/a233ff13-e1c8-4fad-b814-6580c3a83a70">
@@ -17,11 +17,11 @@ Make sure that your "Instance type" is in the free tier mode, like the "t2.micro
 
 <img width="787" alt="Screenshot 2023-05-28 at 14 33 36" src="https://github.com/leorickli/wordpress-aws/assets/106999054/0b9713cc-36bb-44d0-b2fc-845576542448">
 
-For the "Network settings", choose our custom Dev VPC that we created, launch the instance on "Private App Subnet AZ1". Click on "Select existing security group" and choose the "Webserver SG"
+For the "Network settings", choose our custom Dev VPC that we created, launch the instance on "Private App Subnet AZ1". Click on "Select existing security group" and choose the "Webserver SG".
 
 <img width="788" alt="Screenshot 2023-05-28 at 14 35 08" src="https://github.com/leorickli/wordpress-aws/assets/106999054/3d25c60c-4161-4dcc-b1ba-72d8509869da">
 
-For the last and most important step, go to "Advanced details" to find the "User data" section. There will be a blank field, we can paste the code below in this field, but before we do that, we have to paste our EFS mount on \<yourEfsMountHere>\.
+For the last and most important step, go to "Advanced details" to find the "User data" section. There will be a blank field, we can paste the code below in this field, but before we do that, we have to paste our EFS mount on \<yourEfsMountHere>\. This process is called "bootstrapping", you create a set of commands that are executed after the instance has been created, it's like installing the drivers and apps after you install the OS on your machine.
 
 ```
 #!/bin/bash
@@ -92,7 +92,7 @@ Wait for the provisioning of the ALB and once done, we will use the "DNS name" o
 
 ![Screenshot 2023-05-28 at 15 46 45](https://github.com/leorickli/wordpress-aws/assets/106999054/4eefaeda-1d35-4ff6-9390-e7d3412210f7)
 
-But there is one more thing that we need to do. Anytime we change your domain address, we have to go to the WordPress settings and change the domain address there as well. To change the domain settings in the Wordpress configuration file, insert "/wp-admin" in front of your DNS name.
+But there is one more thing that we need to do. Anytime we change our domain address, we have to go to the WordPress settings and change the domain address there as well. To change the domain settings in the WorPpress configuration file, insert "/wp-admin" in front of your DNS name.
 
 ![Screenshot 2023-05-28 at 15 51 43](https://github.com/leorickli/wordpress-aws/assets/106999054/2d90bcd7-2531-4b1f-a90e-29c2dcf89cef)
 
