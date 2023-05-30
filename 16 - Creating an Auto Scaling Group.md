@@ -4,7 +4,7 @@
 
 *AWS Auto Scaling Groups (ASG) are a feature of Amazon Web Services (AWS) that allows you to automatically scale your EC2 instances based on predefined policies and conditions. ASGs are commonly used to maintain the desired number of instances in an application's fleet while automatically adjusting the capacity to meet changing demand.*
 
-In this section, we will create an auto scaling group to dynamically create and scale the webservers in the private app subnets. To do that, we will first terminate our existing EC2 instances in the private app subnets, there is no need to keep them operating since we have all the important files in EFS and data on RDS, we will use an ASG to manage the creation and termination of instances based on our conditions
+In this section, we will create an auto scaling group to dynamically create and scale the webservers in the private app subnets. To do that, we will first terminate our existing EC2 instances in the private app subnets, there is no need to keep them operating since we have all the important files in EFS and data on RDS, we will use an ASG to manage the creation and termination of instances based on our conditions.
 
 ### Creating the Launch Template
 
@@ -68,7 +68,7 @@ On "Load balancing", we will "Attach to an existing load balancer" and choose ou
 
 On "Group size", we will set our desired capacity to 2,1,4. This way, ASG will try to maintain 2 instances deployed, the minimum will be 1 when there is minimal or zero demand and the maximum will be 4 when there is max demand. Click "Next".
   
-![Screenshot 2023-05-29 at 22 22 20](https://github.com/leorickli/wordpress-aws/assets/106999054/7fad8d2d-359c-4012-bc65-083f953fbce
+![Screenshot 2023-05-29 at 22 50 16](https://github.com/leorickli/wordpress-aws/assets/106999054/f826c9e7-b1bb-4a56-ba99-c70b3abe5e07)
 
 On "Add notifications", click "Add notification" > "Create a topic". Give it a name and select a random email address. Click "Next".
   
