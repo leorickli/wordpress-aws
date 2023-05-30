@@ -1,4 +1,4 @@
-## Creating the RDS Instance
+## Creating the RDS Instances
 
 ![Screenshot 2023-05-26 at 15 36 13](https://github.com/leorickli/wordpress-aws/assets/106999054/d936fb71-fa49-4deb-ab36-0dbaecf786fe)
 
