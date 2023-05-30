@@ -1,10 +1,10 @@
-<img width="794" alt="Screenshot 2023-05-30 at 17 23 57" src="https://github.com/leorickli/wordpress-aws/assets/106999054/925206ac-ced7-4f78-8e3b-61a258e48c03">
+<img width="794" alt="242088891-925206ac-ced7-4f78-8e3b-61a258e48c03" src="https://github.com/leorickli/wordpress-aws/assets/106999054/45fa8e5c-1771-4554-8ba3-7dbf0cce1a55">
 
 # Hosting WordPress on AWS - Full Guide
 
 This is a (almost) free guide that will teach you how to deploy a fully operational WordPress website on AWS cloud infrastructure. I say almost free because we still have to pay for a domain in Route 53 to make the connection via "traditional" ways through a domain name, secured by an SSL certificate.
 
-<img width="876" alt="Screenshot 2023-05-30 at 17 54 33" src="https://github.com/leorickli/wordpress-aws/assets/106999054/684a5db5-cadb-4b77-ad4c-1855d14adb8f">
+<img width="876" alt="242095090-684a5db5-cadb-4b77-ad4c-1855d14adb8f" src="https://github.com/leorickli/wordpress-aws/assets/106999054/35b82796-0e9a-4ca5-91ac-712964168ed0">
 
 This is an excelent project to hone your AWS and cloud skills, since all cloud counterparts (GCP, Azure, etc) use similar structure compared to this. You will learn how to use VPCs, subnets, security groups, NAT gateways, route tables, VMs, file systems, databases, create domain names, SSL certificates and IAM roles, making it a great add to your portfolio.
 
