@@ -8,7 +8,7 @@ In the EC2 dashboard, select "Instances" and then select the instance you create
 
 ### For Mac/Linux Users
 
-Open your terminal and type "ssh -i myec2key.pem ec2-user@34.229.253.79". Paste your IPv4 address after "ec2-user@". Remember to store your key pair on your home directory, otherwise you will have to specify the directory that the key pair is stored in the command. For the first time using this command, you will get a warning message and it will be asking if you are sure you want to continue connecting, just type "yes" and you will be fine. Be also aware that, if by any means you change your private IP (continue with your project in a different location, like your friend's house), the connection will not be possible, you will then have to select your new IP on the SSH SG.
+Open your terminal and type "ssh -i myec2key.pem ec2-user@<yourIpv4Here>". Paste your IPv4 address after "ec2-user@", on \<yourIpv4Here\>. Remember to store your key pair on your home directory, otherwise you will have to specify the directory that the key pair is stored in the command. For the first time using this command, you will get a warning message and it will be asking if you are sure you want to continue connecting, just type "yes" and you will be fine. Be also aware that, if by any means you change your private IP (continue with your project in a different location, like your friend's house), the connection will not be possible, you will then have to select your new IP on the SSH SG.
 
 <img width="579" alt="Screenshot 2023-05-28 at 09 20 59" src="https://github.com/leorickli/wordpress-aws/assets/106999054/78db32a7-4159-4c25-8a70-5c14a3226394">
 
