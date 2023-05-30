@@ -63,7 +63,7 @@ On "Network", select our custom Dev VPC and for the AZs, select our private app 
 
 On "Load balancing", we will "Attach to an existing load balancer" and choose our "Dev-TG" target group. On "Health checks", we will "Turn on Elastic Load Balancing health checks" and on "Additional settings" we will "Enable group metrics collection within CloudWatch". Click "Next".
   
-![Screenshot 2023-05-29 at 22 18 57](https://github.com/leorickli/wordpress-aws/assets/106999054/14bc3267-bc4f-4e44-9675-3936872032)
+![Screenshot 2023-05-29 at 22 46 21](https://github.com/leorickli/wordpress-aws/assets/106999054/55a327cc-70cd-484c-9c8e-fff102ba9249)
 ![Screenshot 2023-05-29 at 22 19 17](https://github.com/leorickli/wordpress-aws/assets/106999054/3e5af466-5577-440f-90c4-67c3b65dea30)
 
 On "Group size", we will set our desired capacity to 2,1,4. This way, ASG will try to maintain 2 instances deployed, the minimum will be 1 when there is minimal or zero demand and the maximum will be 4 when there is max demand. Click "Next".
@@ -78,10 +78,4 @@ On "Add tags", click "Add tag". On "Key", fill it with "Name" and on "Value", fi
   
 ![Screenshot 2023-05-29 at 22 43 57](https://github.com/leorickli/wordpress-aws/assets/106999054/9d047dfe-97d5-4259-8c04-0135d5342c31)
 
-On the next page you can review all the info that you provided, once reviews, click on "Create auto scaling group".
-  
-  
-  
-  
-  
-  
+On the next page you can review all the info that you provided, once reviews, click on "Create auto scaling group". This can take up some time, this is because we are baking and bootstrapping the EC2 instances with our user data. Make sure to check you website again to see if it is connecting.
