@@ -1,6 +1,6 @@
 ## Creating the Security Groups
 
-<img width="1044" alt="Screenshot 2023-05-25 at 23 08 43" src="https://github.com/leorickli/wordpress-aws/assets/106999054/be107717-0b37-4f0f-8699-5613ca8ff3e3">
+<img width="1044" alt="241100925-be107717-0b37-4f0f-8699-5613ca8ff3e3" src="https://github.com/leorickli/wordpress-aws/assets/106999054/faf280c5-436b-405c-9c94-bb4e988ca9d1">
 
 *In AWS, a Security Group (SG) is a virtual firewall that controls inbound and outbound traffic for EC2 instances, RDS instances, and other resources within a VPC. It acts as a first line of defense for your resources, allowing you to define inbound and outbound rules to control network access.*
 
@@ -14,7 +14,7 @@ In this section we will create multiple Security Groups:
 
 ### ALB SG
 
-![Screenshot 2023-05-26 at 14 04 18](https://github.com/leorickli/wordpress-aws/assets/106999054/d5c35f11-145a-409a-b7fd-fcfc0537b81a)
+![241280803-d5c35f11-145a-409a-b7fd-fcfc0537b81a](https://github.com/leorickli/wordpress-aws/assets/106999054/d89540fd-99d0-48c9-ad79-303b9cfbd7f5)
 
 The first Security Group we will create is the Application Load Balancer (ALB) SG. We will open port 80 (for HTTP connection) and 443 (for HTTPS connection) and the source is going to come from anywhere on the internet (0.0.0.0/0).
 
@@ -25,7 +25,7 @@ Search for VPC on the AWS console. On the VPC dashboard, select "Security groups
 
 It's worth noting that, since SGs are stateful (when you allow inbound traffic, the corresponding outbound traffic is automatically allowed) you do not need to add an explicit outbound rule to allow connection traffic when you have already added an inbound rule in your security group.
 
-![Screenshot 2023-05-26 at 14 43 24](https://github.com/leorickli/wordpress-aws/assets/106999054/195c45ab-bc10-4f51-92ae-6f32a01d9f02)
+![241287898-195c45ab-bc10-4f51-92ae-6f32a01d9f02](https://github.com/leorickli/wordpress-aws/assets/106999054/bdaa95a0-fc4b-46fd-adab-72a790154230)
 
 ### SSH SG
 
@@ -35,11 +35,11 @@ On VPC dashboard that is on the left side, select "Security groups", click "Crea
 
 1. Type: SSH (port 22). Source: My IP
 
-![Screenshot 2023-05-26 at 14 51 46](https://github.com/leorickli/wordpress-aws/assets/106999054/ee5b6401-ef8e-4d0a-82ab-d2256b194105)
+![241289630-ee5b6401-ef8e-4d0a-82ab-d2256b194105](https://github.com/leorickli/wordpress-aws/assets/106999054/2c8c5a5e-cea8-4ca5-bf72-262df903b11c)
 
 ### Webserver SG
 
-![Screenshot 2023-05-26 at 14 32 13](https://github.com/leorickli/wordpress-aws/assets/106999054/4e4e6ea0-3fe6-42c9-9316-349d37ed2a28)
+![241286101-4e4e6ea0-3fe6-42c9-9316-349d37ed2a28](https://github.com/leorickli/wordpress-aws/assets/106999054/60bc8e78-88e3-422b-ae42-1c6578448974)
 
 The next Security Group is the Webserver SG. This is the SG we will add to the webservers in the private app subnets. We will open port 80 (for HTTP connection) and 443 (for HTTPS connection) and the source is going to come from the ALB SG. We will also open port 22 (for SSH connection) and the source is going to come from the SSH SG.
 
@@ -49,11 +49,11 @@ On VPC dashboard that is on the left side, select "Security groups", click "Crea
 2. Type: HTTPS (port 443). Source: Custom and select ALB SG
 3. Type: HTTP (port 22). Source: Custom and select SSH SG
 
-![Screenshot 2023-05-26 at 14 55 52](https://github.com/leorickli/wordpress-aws/assets/106999054/d34f95e3-82fe-4756-b870-9ef787ce9dbd)
+![241290357-d34f95e3-82fe-4756-b870-9ef787ce9dbd](https://github.com/leorickli/wordpress-aws/assets/106999054/1c21e83e-97f9-44f2-b246-81e9d1124bcc)
 
 ### Database SG
 
-![Screenshot 2023-05-26 at 14 34 18](https://github.com/leorickli/wordpress-aws/assets/106999054/76f74ce6-4e8e-4bcb-9f7f-6b4a7ff7f168)
+![241286380-76f74ce6-4e8e-4bcb-9f7f-6b4a7ff7f168](https://github.com/leorickli/wordpress-aws/assets/106999054/84f88b29-251d-4293-815a-ae3aa85631b7)
 
 The next Security Group is the Database SG. This is the SG we will add to the RDS istance in the private data subnet. We will open port 3306 (for MySQL connection) and the source is going to come from the Webserver SG.
 
@@ -61,11 +61,11 @@ On VPC dashboard that is on the left side, select "Security groups", click "Crea
 
 1. Type: MYSQL/Aurora (port 3306). Source: Custom and select Webserver SG
 
-![Screenshot 2023-05-26 at 15 07 15](https://github.com/leorickli/wordpress-aws/assets/106999054/73ef3e53-5031-48cc-aec5-9bdc58168462)
+![241292576-73ef3e53-5031-48cc-aec5-9bdc58168462](https://github.com/leorickli/wordpress-aws/assets/106999054/405862fc-4996-40fe-8d65-43fccb9c1faf)
 
 ### EFS SG
 
-![Screenshot 2023-05-26 at 14 35 11](https://github.com/leorickli/wordpress-aws/assets/106999054/b38d1ca9-d565-4fa2-8520-33619430c080)
+![241286488-b38d1ca9-d565-4fa2-8520-33619430c080](https://github.com/leorickli/wordpress-aws/assets/106999054/6c92383a-9a0d-4255-b306-a5005c188c36)
 
 The last Security Group is the EFS SG. This is the SG we will add to the EFS resource. We will open port 2049 (for NFS (Network File System) protocol connection) and the source is going to come from the Webserver SG and the EFS SG. We are also going to open port 22 and the source is going to come from the SSH SG.
 
@@ -74,12 +74,12 @@ On VPC dashboard that is on the left side, select "Security groups", click "Crea
 1. Type: NFS (port 2049). Source: Custom and select Webserver SG
 2. Type: SSH (port 22). Source: Custom and select SSH SG
 
-![Screenshot 2023-05-26 at 15 11 02](https://github.com/leorickli/wordpress-aws/assets/106999054/30680c47-5e93-4545-8996-25c58e5f55b6)
+![241293306-30680c47-5e93-4545-8996-25c58e5f55b6](https://github.com/leorickli/wordpress-aws/assets/106999054/3a36d1dd-930f-4606-b8af-065795b6bbfd)
 
 After you created the SG, on the "Inbound rules" tab, select "Edit inbound rules". Add one more port:
 
 1. Type: NFS (port 2049). Source: Custom and select EFS SG
 
-![Screenshot 2023-05-26 at 15 19 32](https://github.com/leorickli/wordpress-aws/assets/106999054/a28bb819-a8c0-4e31-9775-f662446e0ced)
+![241294829-a28bb819-a8c0-4e31-9775-f662446e0ced](https://github.com/leorickli/wordpress-aws/assets/106999054/ceba92e5-44c0-4958-8bc4-840605ecbbb5)
 
 The reason for adding a rule to an EFS security group to allow it to contact itself is to allow the various instances or resources that are associated with the security group to access the EFS file system. Without this rule, the instances or resources would not be able to communicate with the EFS file system and would not be able to access or store files on it. By allowing the SG to contact itself, you are essentially creating a permission for the resources within the security group to communicate with the EFS file system. This is an important step in the process of setting up and using an EFS file system.
