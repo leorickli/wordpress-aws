@@ -8,7 +8,7 @@ In this section, we will create an auto scaling group to dynamically create and 
 
 ### Creating the Launch Template
 
-First we will delete the EC2 instances. In the AWS console, search for EC2, in the EC2 dashboard, select "EC2 Dashbord" and then "Instances (running)". Right-click on both of your EC2 instances and click on "Terminate".
+First, we delete the EC2 instances. In the AWS console, search for EC2, in the EC2 dashboard, select "EC2 Dashboard" and then "Instances (running)". Right-click on both of your EC2 instances and click on "Terminate".
 
 ![Screenshot 2023-05-29 at 21 43 06](https://github.com/leorickli/wordpress-aws/assets/106999054/770de56a-0fd5-49bf-98b8-bc8918ee2af2)
 
@@ -16,7 +16,7 @@ Now we create a launch template, it contains the configuration of the EC2 instan
 
 ![Screenshot 2023-05-29 at 21 50 27](https://github.com/leorickli/wordpress-aws/assets/106999054/eb584a29-ff2a-4844-8d7a-70abd068005a)
 
-On "Applications and OS images", select "Amazon Linux" > "Amazon Linux 2 AMI (HVM)", on "Instance type", select "t2.micro" (the free one) and on "Key pair (login)", select the key pair that we created. This is just because we still have that key but we don't actually have to use it since we are using Session Manager to have access to our instances.
+On "Applications and OS images", select "Amazon Linux" > "Amazon Linux 2 AMI (HVM)", on "Instance type", select "t2.micro" (the free one) and on "Key pair (login)", select the key pair that we created. This is just because we still have that key, but we don't actually have to use it since we are using Session Manager to have access to our instances.
 
 ![Screenshot 2023-05-29 at 21 52 34](https://github.com/leorickli/wordpress-aws/assets/106999054/1c1126ab-12cc-4422-acb0-1e469fe8bc40)
 ![Screenshot 2023-05-29 at 21 52 54](https://github.com/leorickli/wordpress-aws/assets/106999054/d49621eb-2304-4fa0-8f2f-fe802ca673b9)
@@ -78,4 +78,4 @@ On "Add tags", click "Add tag". On "Key", fill it with "Name" and on "Value", fi
   
 ![Screenshot 2023-05-29 at 22 43 57](https://github.com/leorickli/wordpress-aws/assets/106999054/9d047dfe-97d5-4259-8c04-0135d5342c31)
 
-On the next page you can review all the info that you provided, once reviews, click on "Create auto scaling group". This can take up some time, this is because we are baking and bootstrapping the EC2 instances with our user data. Make sure to check you website again to see if it is connecting.
+On the next page you can review all the info that you provided, once reviews, click on "Create auto scaling group". This can take up some time, this is because we are baking and bootstrapping the EC2 instances with our user data. Make sure to check your website again to see if it is connecting.
