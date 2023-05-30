@@ -1,10 +1,10 @@
-## Building a Three-Tier AWS Network VPC
+## Building a Three-Tiered AWS VPC
 
 ![Screenshot 2023-05-25 at 16 52 43](https://github.com/leorickli/wordpress-aws/assets/106999054/40b3638a-776c-48de-a4fa-8f0a272325af)
 
 *Creating VPCs and subnets provides you with flexibility, control, and security when deploying and managing your resources in the AWS cloud. It allows you to build a customized network infrastructure tailored to your specific needs while maintaining a secure and isolated environment.*
 
-We will start by creating a custom VPC, we will build a three-tier VPC using the architecture shown above.
+We will start by creating a custom VPC, we will build a three-tiered VPC using the architecture shown above.
 In this architecture, your infrastructure is divided into three tiers:
 
 - **Tier 1 - Public Subnet**: This subnet will have resources like the NAT gateway and the load balancer
