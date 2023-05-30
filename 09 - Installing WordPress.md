@@ -6,7 +6,7 @@ Now that we enabled SSH into our server, we are going to run a list of commands 
 
 We have to first update the mount information of EFS, to do that, go to the AWS console and search for EFS. On the EFS page, select your EFS on "File system ID", then click "Attach". This is where you will find the information to mount your EFS, copy only the section that is on the red circle and replace it on the \<yourEfsMountHere>\.
 
-<img width="1475" alt="Screenshot 2023-05-27 at 13 08 26" src="https://github.com/leorickli/wordpress-aws/assets/106999054/df467bed-b989-4075-ba02-675f4ed14ef7">
+<img width="1475" alt="241409404-df467bed-b989-4075-ba02-675f4ed14ef7" src="https://github.com/leorickli/wordpress-aws/assets/106999054/b27b10f1-0ce9-448c-9978-75efffc9acbd">
 
 ```
 sudo su
@@ -29,7 +29,7 @@ sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,ret
 
 Once the code has been inserted, confirm that your EFS is mounted by typing "df - h".
 
-<img width="576" alt="Screenshot 2023-05-27 at 21 01 48" src="https://github.com/leorickli/wordpress-aws/assets/106999054/4d05491d-8dc3-43bf-90df-05bdd8fd4b4b">
+<img width="576" alt="241453565-4d05491d-8dc3-43bf-90df-05bdd8fd4b4b" src="https://github.com/leorickli/wordpress-aws/assets/106999054/5ac0c27d-dc2c-4b25-b9b3-86da7e45aeb8">
 
 ### 2. Install the Apache webserver
 ```
@@ -107,13 +107,12 @@ nano /var/www/html/wp-config.php
 
 Once Nano has been opened, we are going to enter the information of our RDS database. Keep pressing the down arrow until you come to the "DB_NAME", this is where you replace it with the name of your database. To retrieve your database name, go to your AWS console and search for RDS. On the RDS dashboard, select "Databases", click on your "dev-rds-db" database. You can see your "DB name" on the "Configuration" tab, in our case, it's going to be "applicationdb".
 
-<img width="1165" alt="Screenshot 2023-05-27 at 21 26 39" src="https://github.com/leorickli/wordpress-aws/assets/106999054/8d8a2b2d-ba08-40c3-8036-9a6e9ff28dea">
+<img width="1165" alt="241455604-8d8a2b2d-ba08-40c3-8036-9a6e9ff28dea" src="https://github.com/leorickli/wordpress-aws/assets/106999054/7351b741-c8df-4649-a832-3862c7b728f5">
 
 We will have to put our username and password on the correct fields. Finally, we have to change our database hostname, by changing the "localhost", to do that, go to the "Connectivity & security" tab, there we will find the endpoint value that we have to paste.
 
-<img width="1175" alt="Screenshot 2023-05-27 at 21 35 56" src="https://github.com/leorickli/wordpress-aws/assets/106999054/ea03651d-9a03-4529-a963-18c84a07d487">
-
-<img width="673" alt="Screenshot 2023-05-27 at 21 38 02" src="https://github.com/leorickli/wordpress-aws/assets/106999054/9a211a2d-c1ac-4631-bb13-68c31b425168">
+<img width="1175" alt="241456343-ea03651d-9a03-4529-a963-18c84a07d487" src="https://github.com/leorickli/wordpress-aws/assets/106999054/6442d26d-d9c8-4a02-a48c-6bef3ca8bcf5">
+<img width="673" alt="241456493-9a211a2d-c1ac-4631-bb13-68c31b425168" src="https://github.com/leorickli/wordpress-aws/assets/106999054/28071572-cf49-45f3-ad7f-6cff18811a73">
 
 Once we finished on filling the info required, we exit Nano. To do that, press "Control + X" > "Y" > "Enter".
 
@@ -127,8 +126,8 @@ service httpd restart
 
 We can now connect into our Wordpress website, just copy your instance's "Public IPv4 address" again and paste it on your browser, we will see the Wordpress welcome page and you can insert your data, then click "Install WordPress".
 
-<img width="751" alt="Screenshot 2023-05-28 at 14 02 22" src="https://github.com/leorickli/wordpress-aws/assets/106999054/07843a94-aa06-485f-aa6b-e9216c23a592">
+<img width="751" alt="241575270-07843a94-aa06-485f-aa6b-e9216c23a592" src="https://github.com/leorickli/wordpress-aws/assets/106999054/dc7d5a52-b7c2-437b-a796-731f93fa4086">
 
 Once you've logged in to the site, we can see that finally we have our WordPress loud and pround in the screen.
 
-<img width="1506" alt="Screenshot 2023-05-28 at 14 05 08" src="https://github.com/leorickli/wordpress-aws/assets/106999054/a3701526-4196-440f-a6eb-1968fe454fc8">
+<img width="1506" alt="241575447-a3701526-4196-440f-a6eb-1968fe454fc8" src="https://github.com/leorickli/wordpress-aws/assets/106999054/aedcdfd3-772c-4793-a690-3af4c382031b">
