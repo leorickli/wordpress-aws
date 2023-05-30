@@ -6,9 +6,15 @@ This is a (almost) free guide that will teach you how to deploy a fully operatio
 
 <img width="876" alt="Screenshot 2023-05-30 at 17 54 33" src="https://github.com/leorickli/wordpress-aws/assets/106999054/684a5db5-cadb-4b77-ad4c-1855d14adb8f">
 
+This is an excelent project to hone your AWS and cloud skills, since all cloud counterparts (GCP, Azure, etc) use similar structure compared to this. You will learn how to use VPCs, subnets, security groups, NAT gateways, route tables, VMs, file systems, databases, create domain names, SSL certificates and IAM roles, making it a great add in your portfolio.
+
 ### Resources Used
 
+Amazon VPC; EC2; IAM; EFS; RDS; Route 53; Certificate Manager; Systems Manager.
+
 ### Minimum Requirements
+
+A minimum of cloud computing, networking and Linux commands knowledge is necessary to understand and deploy the resources provided in this guide. Some knowledge in the aforementioned AWS resources will be nice to have, but I will try to explain it on their respective sections.
 
 ### Sections
 
@@ -26,5 +32,5 @@ This is a (almost) free guide that will teach you how to deploy a fully operatio
 12. **Creating a Record Set in Route 53**: Use Amazon Route 53 to create a record set with an alias so we can access our website using our domain name.
 13. **Registering for an SSL Certificate in AWS Certificate Manager**: Use AWS Certificate Manager to register for a SSL certificate and use the SSL certificate to encrypt all communications between the web browser and webservers.
 14. **Connecting to AWS Using Session Manager**: Use AWS Systems Manager Session Manager and AWS IAM to create a role that will make the connection to the private EC2 instances, removing the need to SSH using key pairs.
-15. **Creating a HTTPS Listener for the Application Load Balancer**: 
-16. **Creating an Auto Scaling Group**:
+15. **Creating a HTTPS Listener for the Application Load Balancer**: Use Amazon EC2 to create a HTTPS listener so we can make secure connections to the website.
+16. **Creating an Auto Scaling Group**: Use Amazon EC2 to create an auto scaling group that automatically scale the amount of EC2 instances based on predefined policies and conditions.
