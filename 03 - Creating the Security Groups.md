@@ -29,7 +29,7 @@ It's worth noting that, since SGs are stateful (when you allow inbound traffic, 
 
 ### SSH SG
 
-The next Security Group we will create is called the SSH (Secure Shell) SG. This is the SG we will use for the SSH connection on the EC2 instances by opening port 22 (for SSH connection). The source is going to come from your IP address. Everytime you create an SSH SG, you should always limit the source of the traffic to your IP address.
+The next Security Group we will create is called the SSH (Secure Shell) SG. This is the SG we will use for the SSH connection on the EC2 instances by opening port 22 (for SSH connection). The source is going to come from your IP address. Every time you create an SSH SG, you should always limit the source of the traffic to your IP address.
 
 On VPC dashboard that is on the left side, select "Security groups", click "Create security group". Give it a name and the same name for the description, select your custom Dev VPC that you created. On "Inbound rules", click "Add rule", we will add one port:
 
