@@ -2,6 +2,8 @@
 
 In this section, we will create an HTTPS listener for our ALB to secure our website. We already created an HTTP listener but now we will create one with the extra SSL/TLS (Secure Sockets Layer/Transport Layer Security) encryption.
 
+### Creating the HTTPS Listener
+
 To do that, search for EC2 in the AWS console. On the EC2 dashboard, go to "Load Balancing" > "Load Balancers", select the ALB that you created on section #10 and go for the "Listeners" tab > "Add listener". Now we will change the "Protocol" to "HTTPS" (443), on "Default actions", select "Forward" (determines how incoming requests are processed and forwarded to the target group).
 
 <img width="808" alt="Screenshot 2023-05-29 at 10 43 42" src="https://github.com/leorickli/wordpress-aws/assets/106999054/76a324bc-efd2-4518-aee9-5cc45127e338">
@@ -14,17 +16,19 @@ Now we have to edit our HTTP listener to redirect HTTP traffic to HTTPS. To do t
 
 <img width="813" alt="Screenshot 2023-05-29 at 15 13 48" src="https://github.com/leorickli/wordpress-aws/assets/106999054/33c2a47b-cd59-447f-b6a3-9d3301e0fd40">
 
+### Updating the "wp-config" File
+
 Now, to make sure that our website is secure, the next thing we need to do is to connect via Session Manager into one of our webservers in the private app subnets so we can modify the "wp-config" file. To do that, select "EC2 dashboard" > "Instances (running)". Select one of your EC2 instances, right-click on it and choose "Connect". In the "Connect to instance" page, select the "Session manager" tab and click "Connect".
 
 <img width="815" alt="Screenshot 2023-05-29 at 20 40 47" src="https://github.com/leorickli/wordpress-aws/assets/106999054/3caf8095-0eae-4e12-a032-c4e036787022">
 
-Once connected via session manager, we will insert a series of commands:
+Once connected via session manager, we will insert a series of commands, the first one will make you the root user:
 
 ```
 sudo su
 ```
 
-This will make you the root user.
+The second one will make you enter "wp-config" via the Nano text editor:
 
 ```
 nano /var/www/html/wp-config.php
@@ -53,7 +57,11 @@ if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO
 
 <img width="887" alt="Screenshot 2023-05-29 at 20 55 04" src="https://github.com/leorickli/wordpress-aws/assets/106999054/2c8b536b-5f14-4acf-bba0-b54132827ed0">
 
-No need to edit the second EC2 instance because the "wp-config" file is stored in EFS. Now that we edited the "wp-config" file by adding the code above, we will now connect to our website to make sure that it now has an SSL connection. To do that, type your website domain with "https://" 
+No need to edit the second EC2 instance because the "wp-config" file is stored in EFS. 
+
+### Connecting to the Website Using SSL Certificate
+
+Now that we edited the "wp-config" file by adding the code above, we will now connect to our website to make sure that it now has an SSL connection. To do that, type your website domain with "https://" 
 
 ![Screenshot 2023-05-29 at 21 08 36](https://github.com/leorickli/wordpress-aws/assets/106999054/2aa76d6e-019e-4084-a995-43fed41ba92b)
 
