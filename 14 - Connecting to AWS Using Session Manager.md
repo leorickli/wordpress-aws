@@ -1,8 +1,8 @@
 ## Connecting to AWS Using Session Manager
 
-In this section, we will be using the AWS Systems Manager Session Manager to make a connection to our private EC2 instances. You could deploy a Bastion Host which is just an EC2 instance in the public subnet that has access to the private EC2 instances, but it's more efficient to use Session Manager because you don't need to use key pairs or and SSH SG, you can delegate access to manage EC2 instances using IAM roles and, of course, you don't need to create another EC2 instance for that. 
+In this section, we will be using the AWS Systems Manager Session Manager to make a connection to our private EC2 instances. You could deploy a Bastion Host which is just an EC2 instance in the public subnet that has access to the private EC2 instances, but it's more efficient to use Session Manager because you don't need to use key pairs and SSH SG, you can delegate access to manage EC2 instances using IAM roles and of course, you don't need to create another EC2 instance for that. 
 
-We are going to create an IAM role for the EC2 instance, so we assume a role to access the private EC2 instances. To do that, go to your AWS console and search for IAM. On the IAM dashboard, select "Roles" and then "Create role". On "Use case", select "EC2" and click next.
+We are going to create an IAM role for the EC2 instance so we assume a role to access the private EC2 instances. To do that, go to your AWS console and search for IAM. On the IAM dashboard, select "Roles" and then "Create role". On "Use case", select "EC2" and click next.
 
 <img width="1087" alt="Screenshot 2023-05-28 at 23 07 03" src="https://github.com/leorickli/wordpress-aws/assets/106999054/544eee7a-b175-48e7-8d59-c915391540a1">
 
@@ -18,6 +18,6 @@ Now let's go back to our EC2 instances and attach this new role to them. To do t
 
 <img width="812" alt="Screenshot 2023-05-28 at 23 22 01" src="https://github.com/leorickli/wordpress-aws/assets/106999054/62381660-696f-4e76-b16a-dbc99aacb04d">
 
-This can take some time, it took nearly 40 minutes for me. Don't forget to do that on your second EC2 instance.
+This can take some time; it took nearly 40 minutes for me. Don't forget to do that on your second EC2 instance.
 
 <img width="810" alt="Screenshot 2023-05-29 at 00 01 49" src="https://github.com/leorickli/wordpress-aws/assets/106999054/f6d7bad8-acad-486e-b8ab-9d2ef46393c0">
