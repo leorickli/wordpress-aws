@@ -11,7 +11,7 @@ In this architecture, your infrastructure is divided into three tiers:
 - **Tier 2 - Private App Subnet**: This is the subnet that will hold our web servers (EC2 instances), managed by an auto scaling group.
 - **Tier 3 - Private Data Subnet**: This subnet will hold our database.
 
-We will duplicate these subnets across another Availability Zone (AZ) for High Availability (HA) and Fault Tolerance (FA). Next, an Internet Gateway (IG) will be created and a Route Table to allow the resources in our VPC to have access to the public internet.
+We will duplicate these subnets across another Availability Zone (AZ) for High Availability (HA) and fault tolerance. Next, an Internet Gateway (IG) will be created and a Route Table to allow the resources in our VPC to have access to the public internet.
 
 ### Creating the VPC
 Fist, make sure you select N. Virginia as your region on the AWS console. Search for the VPC service in the search bar and on the VPC page, click on "Create VPC". We have to give a name to the VPC and its IPv4 CIDR, which is the one shown in the diagram above (10.0.0.0/16). Leave the rest as default.
