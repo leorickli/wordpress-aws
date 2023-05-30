@@ -10,3 +10,5 @@ This is a (almost) free guide that will teach you how to deploy a fully operatio
 02. Creating NAT Gateways
 03. Creating the Security Groups
 4. Creating the RDS Instances
+5. Creating the Elastic File System (EFS)
+6. 
