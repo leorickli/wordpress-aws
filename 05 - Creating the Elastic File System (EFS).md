@@ -17,4 +17,4 @@ Select your Dev VPC on the network. On "Mount targets", we will select the subne
 
 ![Screenshot 2023-05-26 at 17 24 25](https://github.com/leorickli/wordpress-aws/assets/106999054/48242edc-15e9-4659-8aba-86cd07d2f139)
 
-No need to make changes in the "File system policy", click "Next". On the "Review and create" you can click "Create".
+No need to make changes to the "File system policy", click "Next". On the "Review and create" you can click "Create".
