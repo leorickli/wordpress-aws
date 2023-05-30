@@ -8,8 +8,8 @@ We will start by creating a custom VPC, we will build a three-tier VPC using the
 In this architecture, your infrastructure is divided into three tiers:
 
 - **Tier 1 - Public Subnet**: This subnet will have resources like the NAT gateway and the load balancer
-- **Tier 2. - Private App Subnet**: This is the subnet that will hold our web servers (EC2 instances), managed by an auto scaling group.
-- **Tier 3. - Private Data Subnet**: This subnet will hold our database.
+- **Tier 2 - Private App Subnet**: This is the subnet that will hold our web servers (EC2 instances), managed by an auto scaling group.
+- **Tier 3 - Private Data Subnet**: This subnet will hold our database.
 
 We will duplicate these subnets across another Availability Zone (AZ) for High Availability (HA) and Fault Tolerance (FA). Next, an Internet Gateway (IG) will be created and a Route Table to allow the resources in our VPC to have access to the public internet.
 
@@ -43,7 +43,7 @@ In the VPC service, select "Subnets" on the left side, then click "Create subnet
 
 Now we have to create the second public subnet, to do that, click on "Create Subnet" again and follow the same steps we used previously to create our first public subnet, this time, give it the name "Public Subnet AZ2", select "us-east-1b" as the AZ and give the CIDR block the number "10.0.1.0/24", according to the diagram above.
 
-Next, we will enable the "Auto assign IP settings". This means that everytime you launch an EC2 instance in these public subnets, those EC2 instances will be assigned a public IPv4 address. To do that, select one of the public subnet, click "Actions" > "Edit subnet settings". Click on the checkbox that says "Enable auto-assign public IPv4 address".
+Next, we will enable the "Auto assign IP settings". This means that every time you launch an EC2 instance in these public subnets, those EC2 instances will be assigned a public IPv4 address. To do that, select one of the public subnet, click "Actions" > "Edit subnet settings". Click on the checkbox that says "Enable auto-assign public IPv4 address".
 
 ![Screenshot 2023-05-25 at 16 20 57](https://github.com/leorickli/wordpress-aws/assets/106999054/a2eb465b-8114-4cb1-a10d-0d73cf9873b5)
 
@@ -51,7 +51,7 @@ Do the same thing to the other public subnet.
 
 ### Creating the Route Table
 
-In the VPC service, select "Route tables" on the left side. You can see an already existing route table in the list, this route table is created by default when you create the VPC. Another thing you should know is that this one is called the "main" route table and it's private by default. We have to create a public route table. To do that, click on "Create route table", give it a name and choose our custom Dev VPC that we just created. On "Tags", give the the "Key" a "Name" and for "Value", you can it the same name as the route table.
+In the VPC service, select "Route tables" on the left side. You can see an already existing route table in the list, this route table is created by default when you create the VPC. Another thing you should know is that this one is called the "main" route table and it's private by default. We have to create a public route table. To do that, click on "Create route table", give it a name and choose our custom Dev VPC that we just created. On "Tags", give the "Key" a "Name" and for "Value", you can it the same name as the route table.
 
 ![Screenshot 2023-05-25 at 16 30 38](https://github.com/leorickli/wordpress-aws/assets/106999054/ba7d8594-d822-45a9-a773-5027d2727b5e)
 
@@ -63,4 +63,4 @@ Now we associate the public subnets to the public route table that we created. O
 
 ![Screenshot 2023-05-25 at 16 44 43](https://github.com/leorickli/wordpress-aws/assets/106999054/109b3b7c-a39d-45ac-9d57-0c04bfba0ae0)
 
-Finally, we will create our last four private subnets, two for the application and two for the database. We just have to repeat the steps when we created the public subnets, but following the diagram above. The difference between a public and private subnet is that you attach a public route table to the public subnet. A route table is public when you add "0.0.0.0/0" to the destination to your Internet Gateway, allowing traffic to all of the internet, without restrictions. The other four private subnets will be implicitly associated with the main route table, the one that is created when you create the VPC, but we will create a private route table for those private subnets in the next section.
+Finally, we will create our last four private subnets, two for the application and two for the database. We just have to repeat the steps when we created the public subnets, but following the diagram above. The difference between a public and private subnet is that you attach a public route table to the public subnet. A route table is public when you add "0.0.0.0/0" to the destination to your Internet Gateway, allowing traffic to all the internet, without restrictions. The other four private subnets will be implicitly associated with the main route table, the one that is created when you create the VPC, but we will create a private route table for those private subnets in the next section.
