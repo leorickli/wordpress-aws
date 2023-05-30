@@ -4,15 +4,15 @@
 
 In this section, we will register for a free SSL certificate from the AWS Certificate Manager and we will use the SSL certificate to encrypt all communications between the web browser and our webservers.
 
-To do that, search for Certificate Manager in the AWS console. In the Certificate Manager console, select "Request a certificate", on the "Request certificate" page, keep with the option to "Request a public certificate" and then click "Next"
+To do that, search for Certificate Manager in the AWS console. In the Certificate Manager console, select "Request a certificate", on the "Request certificate" page, keep with the option to "Request a public certificate" and then click "Next".
 
 ![Screenshot 2023-05-28 at 18 11 30](https://github.com/leorickli/wordpress-aws/assets/106999054/e1cbf6a9-1cf1-4288-9bd2-31dc2cbed64b)
 
-Enter your domain name, once you have entered your domain name, click on "Add another name to this certificate" to add a wildcard for your domain name. The wildcard allows you to have some other options for your domain name like a "www". For that, type "\*." and then your domain name. Click "Request"
+Enter your domain name, once you have entered your domain name, click on "Add another name to this certificate" to add a wildcard for your domain name. The wildcard allows you to have some other options for your domain name like a "www". For that, type "\*." and then your domain name. Click "Request".
 
 ![Screenshot 2023-05-28 at 18 19 36](https://github.com/leorickli/wordpress-aws/assets/106999054/e3cd6a76-c2d3-4d9e-b091-a5def8160a28)
 
-To view it, click on "View certificate" on the top-right section of your screen. You will see the "Certificate status" page and a "Pending validation" status, it's still pending because we have to create a record set in Route 53 to validate that that digital domain name belongs to us. To do that, click "Create records in Route 53"
+To view it, click on "View certificate" on the top-right section of your screen. You will see the "Certificate status" page and a "Pending validation" status, it's still pending because we have to create a record set in Route 53 to validate that the digital domain name belongs to us. To do that, click "Create records in Route 53".
 
 <img width="1121" alt="Screenshot 2023-05-28 at 21 32 19" src="https://github.com/leorickli/wordpress-aws/assets/106999054/563160fe-25db-4826-ab2b-f5031453c4de">
 
