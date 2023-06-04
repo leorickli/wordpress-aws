@@ -35,7 +35,7 @@ On VPC dashboard that is on the left side, select "Security groups", click "Crea
 
 1. Type: SSH (port 22). Source: My IP
 
-![241289630-ee5b6401-ef8e-4d0a-82ab-d2256b194105](https://github.com/leorickli/wordpress-aws/assets/106999054/2c8c5a5e-cea8-4ca5-bf72-262df903b11c)
+![242113534-2c8c5a5e-cea8-4ca5-bf72-262df903b11c](https://github.com/leorickli/wordpress-aws/assets/106999054/212d0956-8a03-427d-8b90-9926226d045e)
 
 ### Webserver SG
 
