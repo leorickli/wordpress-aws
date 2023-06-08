@@ -2,6 +2,8 @@
 
 # Hosting WordPress on AWS - Full Guide
 
+Checkout [my blog post](https://github.com/leorickli/wordpress-aws) to see the personal aspects of doing this project. I garantee you will find something useful there and understand the plethora of knowledge you will acquire by finishing this project.
+
 This is a (almost) free guide that will teach you how to deploy a fully operational WordPress website on AWS cloud infrastructure. I say almost free because we still have to pay for a domain in Route 53 to make the connection via "traditional" ways through a domain name, secured by an SSL certificate.
 
 <img width="876" alt="242095090-684a5db5-cadb-4b77-ad4c-1855d14adb8f" src="https://github.com/leorickli/wordpress-aws/assets/106999054/35b82796-0e9a-4ca5-91ac-712964168ed0">
