@@ -38,7 +38,8 @@ Attach the Internet Gateway to the VPC that we previously created, this way we c
 In the VPC service, select "Subnets" on the left side, then click "Create subnet". Select the VPC you created, give the subnet the name "Public Subnet AZ1", select "us-east-1a" as the AZ and "10.0.0.0/24" as the CIDR block.
 
 ![241008856-6e0cfb3e-be65-4761-96d9-d78bfc3edd32](https://github.com/leorickli/wordpress-aws/assets/106999054/c55db029-60d0-4007-808f-abfb0b4c7ab3)
-![241008996-91a4067f-6d7a-48f8-a4e7-a3f7d70a40d7](https://github.com/leorickli/wordpress-aws/assets/106999054/6dc67de6-5e2d-496e-b563-0ca1cb157965)
+<img width="810" alt="Screenshot 2023-07-22 at 21 18 10" src="https://github.com/leorickli/wordpress-aws/assets/106999054/91fc0394-e65d-421a-bee0-3fe84ce8e2f2">
+
 
 Now we have to create the second public subnet, to do that, click on "Create Subnet" again and follow the same steps we used previously to create our first public subnet, this time, give it the name "Public Subnet AZ2", select "us-east-1b" as the AZ and give the CIDR block the number "10.0.1.0/24", according to the diagram above.
 
