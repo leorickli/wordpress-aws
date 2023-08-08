@@ -1,4 +1,4 @@
-## Registering for an SSL Certificate in AWS Certificate Manager.md
+## Registering for an SSL Certificate in AWS Certificate Manager
 
 *An SSL certificate is a digital certificate that authenticates the identity of a website and enables secure encrypted communication between the website and its visitors. It ensures that the data transmitted between the user's browser and the website's server remains confidential and cannot be intercepted or tampered with by unauthorized parties, this is also known as encryption in transit.*
 
